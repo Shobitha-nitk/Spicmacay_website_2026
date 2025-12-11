@@ -1,73 +1,59 @@
-<!DOCTYPE html>
+<!-- MULTIPAGE VERSION OF SPICMACAY NITK WEBSITE -->
+<!-- This document contains 4 separate HTML files + shared CSS + JS -->
+
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIRASAT - Creating a Legacy | NITK Campus</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPICMACAY NITK — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-area">
+        <img id="site-logo" src="./assets/logo-placeholder.png" alt="logo">
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="calendar.html">Event Calendar</a></li>
+          <li><a href="past.html">Past Events</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <header class="hero-slideshow-container">
-        <div class="hero-overlay">
-            <h1 class="event-title">VIRASAT</h1>
-            <p class="tagline">"Creating a Legacy"</p>
-            <p class="date-location">Feb 5-8 | NITK Campus</p>
-            <p class="audience">Bringing Together: **Artists . Students . Faculty . Families . Public**</p>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>SPICMACAY NITK</h1>
+          <p class="tagline">Celebrating Indian culture on campus.</p>
+          <div class="cta-row">
+            <a class="btn" href="calendar.html">Upcoming Events</a>
+            <a class="btn ghost" href="about.html">Learn More</a>
+          </div>
         </div>
-
-        <div class="slideshow-images">
-            <div class="mySlides fade">
-                <img src="images/slide1.jpg" alt="Virasat Event Photo 1">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/slide2.jpg" alt="Virasat Event Photo 2">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/slide3.jpg" alt="Virasat Event Photo 3">
-            </div>
-        </div>
-    </header>
-
-    <section id="activities" class="section activities-section">
-        <h2 class="section-title">Experience the Culture</h2>
-        <div class="activity-grid">
-            <div class="activity-card">
-                <h3>Workshops</h3>
-                <img src="images/workshop-thumb.jpg" alt="Workshops Photo">
-            </div>
-            <div class="activity-card">
-                <h3>Competitions</h3>
-                <img src="images/competition-thumb.jpg" alt="Competitions Photo">
-            </div>
-            <div class="activity-card">
-                <h3>Performances</h3>
-                <img src="images/performance-thumb.jpg" alt="Performances Photo">
-            </div>
-        </div>
+        <div class="hero-media img-placeholder">Hero Image</div>
+      </div>
     </section>
+  </main>
 
-    <section id="connect" class="section connect-section">
-        <h2 class="section-title">CONNECT YOUR BRAND</h2>
-        <div class="connect-content">
-            <ul class="connect-list">
-                <li>Connect with **10,000+ Students & Families** via Experience Zones.</li>
-                <li>Branding, Social Media and Product Sampling</li>
-                <li>Support **400+ Govt School students** in learning a new artform</li>
-                <li>Preserve and Celebrate our rich heritage</li>
-            </ul>
-        </div>
-    </section>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="left">© SPICMACAY NITK — <span id="year"></span></div>
+      <div class="right"><a href="#">Instagram</a> <a href="#">Facebook</a></div>
+    </div>
+  </footer>
 
-    <footer>
-        <p>Want to know more?</p>
-        <p class="contact-info">
-            Contact: XYZ (Marketing Head) <br>
-            90912xxxx
-        </p>
-        <p>&copy; 2026 SPIC MACAY NITK Mangaluru Chapter</p>
-    </footer>
-
-    <script src="script.js"></script> 
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
