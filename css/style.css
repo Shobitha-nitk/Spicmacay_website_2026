@@ -458,6 +458,11 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+
+
+
 .modal-content {
   overflow: visible ;
 }
@@ -477,4 +482,28 @@ img.hover-shadow {
   top: 10px;
   right: 25px;
   cursor: pointer;
+}
+.modal {
+  display: none !important;
+  position: fixed !important;
+  z-index: 9999 !important;
+  padding-top: 100px !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: auto !important;
+  background-color: rgba(0,0,0,0.9) !important;
+}
+
+.modal-content {
+  margin: auto !important;
+  display: block !important;
+  width: 90% !important;
+  max-width: 1200px !important;
+}
+
+.mySlides img {
+  width: 100% !important;
+  height: auto !important;
 }
