@@ -346,51 +346,51 @@ body {
 /* Modal background */
 .modal {
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 9999;
   left: 0;
-  justify-content: center;
-  align-items: center; /* centers vertically */
-  padding-top: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.95);
-  overflow: hidden;
+  overflow: hidden !important;   /* <--- stops scrolling */
 }
 
-/* Modal content box */
+/* Centers content properly */
 .modal-content {
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   width: 90%;
   max-width: 1000px;
+
+  height: 100%;                 /* <--- VERY important */
+  margin: 0;
   position: relative;
 }
 
-/* BIG IMAGE inside modal */
-/* Images inside modal */
+/* The actual big image */
 .mySlides img {
-  display: block;
-  margin: auto;
-
-  /* FINAL correct size control */
-  max-width: 90%;
-  max-height: 80vh;
-
+  max-width: 90vw;              /* prevent horizontal scroll */
+  max-height: 90vh;             /* prevent vertical scroll */
   width: auto;
   height: auto;
   object-fit: contain;
+  display: block;
+  margin: auto;
 }
 
 /* Hide slides */
-.mySlides {
-  display: none;
-}
+.mySlides { display: none; }
 
 /* Close button */
 .close {
   position: absolute;
-  top: 20px;
+  top: 25px;
   right: 35px;
   font-size: 40px;
   color: white;
@@ -398,7 +398,7 @@ body {
   z-index: 10000;
 }
 
-/* Prev/Next buttons */
+/* Prev/Next */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -407,30 +407,16 @@ body {
   font-size: 40px;
   color: white;
   padding: 16px;
-  user-select: none;
 }
 .prev { left: 0; }
 .next { right: 0; }
 
-/* Number text (1/4) */
+/* Number text */
 .numbertext {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 70px; 
+  left: 20px;
   color: white;
   font-size: 14px;
   z-index: 10000;
-}
-
-/* Thumbnail strip inside modal */
-.demo {
-  width: 80px;
-  height: 60px;
-  object-fit: cover;
-  opacity: .6;
-  cursor: pointer;
-}
-.demo.active,
-.demo:hover {
-  opacity: 1;
 }
