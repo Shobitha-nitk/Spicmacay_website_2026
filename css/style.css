@@ -345,7 +345,7 @@ body {
 
 /* Modal background */
 .modal {
-  display: none;
+  display: flex;
   position: fixed;
   z-index: 9999;
   left: 0;
@@ -356,66 +356,73 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.95);
-  overflow: auto;
+  overflow: hidden;
 }
 
 /* Modal content box */
 .modal-content {
-  margin: 60px auto;
+  margin: 0;
   width: 90%;
   max-width: 1000px;
   position: relative;
 }
 
 /* BIG IMAGE inside modal */
-.modal-content img {
+/* Images inside modal */
+.mySlides img {
   display: block;
   margin: auto;
-  
-  /* This prevents your issue */
+
+  /* FINAL correct size control */
   max-width: 90%;
-  max-height: 85vh;
-  
+  max-height: 80vh;
+
   width: auto;
   height: auto;
   object-fit: contain;
 }
 
-/* Slide container */
+/* Hide slides */
 .mySlides {
   display: none;
 }
 
 /* Close button */
 .close {
-  color: white;
   position: absolute;
   top: 20px;
   right: 35px;
   font-size: 40px;
+  color: white;
   cursor: pointer;
+  z-index: 10000;
 }
 
-/* Position next/prev buttons */
+/* Prev/Next buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  font-size: 30px;
-  padding: 16px;
+  transform: translateY(-50%);
+  font-size: 40px;
   color: white;
+  padding: 16px;
   user-select: none;
 }
+.prev { left: 0; }
+.next { right: 0; }
 
-.prev {
-  left: 0;
+/* Number text (1/4) */
+.numbertext {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 14px;
+  z-index: 10000;
 }
 
-.next {
-  right: 0;
-}
-
-/* Thumbnails inside modal */
+/* Thumbnail strip inside modal */
 .demo {
   width: 80px;
   height: 60px;
@@ -423,30 +430,7 @@ body {
   opacity: .6;
   cursor: pointer;
 }
-
 .demo.active,
 .demo:hover {
   opacity: 1;
 }
-
-/* Number text (1/4) */
-.numbertext {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: white;
-  padding: 10px;
-  font-size: 14px;
-  margin-top: 60px;  /* moves it down */
-  z-index: 9999;
-}
-.mySlides img {
-  max-width: 90%;
-  max-height: 80vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  margin: auto;
-  display: block;
-}
-
